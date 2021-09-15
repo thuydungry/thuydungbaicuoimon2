@@ -1,0 +1,663 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face
+{
+    src: url("../font/OpenSans-Regular.ttf");
+    font-family: menufont;      
+}
+@font-face
+{
+    src: url("../font/OpenSans-BoldItalic.ttf");
+    font-family: tieude1;      
+}
+@font-face
+{
+    src: url("../font/OpenSans-Light.ttf");
+    font-family: noidung;      
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.container1
+{
+    width: 400vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+.nextpage
+{
+    width: 100px;
+    height: 100px; 
+    position: absolute;
+    z-index: 1000;
+    bottom: 6%;
+    right: 5%;
+}
+.nextpage a img
+{
+    opacity: 10%;
+    transition: all 1s;
+}
+.nextpage a:hover img
+{
+    opacity: 100%;
+}
+.prevtpage
+{
+    width: 100px;
+    height: 100px; 
+    position: absolute;
+    z-index: 1000;
+    bottom: 6%;
+    left: 6%;
+}
+.prevtpage a img
+{
+    opacity: 10%;
+    transition: all 1s;
+}
+.prevtpage a:hover img
+{
+    opacity: 100%;
+}
+.header
+{
+    width: 5%;
+    height: 100%;
+    background-color: rgba(61,61,61,0.3);
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+.icon
+{
+    width: 100%;
+    height: 5%;
+    background-color: rgba(61,61,61,0.0);
+    padding: 30%;
+    box-sizing: border-box;
+    color: aliceblue;
+    
+}
+.icon:hover
+{
+    color: rgba(175,175,175,1.00);
+}
+.header-ngang
+{
+    width: 100%;
+    height: 5%;
+    background: none;
+    position: fixed;
+    z-index: 1000;
+    
+}
+.header-ngang0
+{
+/*    width: 40%;*/
+/*    height: 100%;*/
+   
+    margin: 0 auto;
+}
+.header-ngang1
+{
+    width: 40%;
+    height: 100%;
+    
+    padding-top: 20px;
+    padding-left: 0px;
+    float: right;
+    color: aliceblue;
+    font-size: 12pt;
+}
+.header-ngang1 img:hover
+{
+    visibility: visible;
+}
+.header-ngang2
+{
+    width: 60%;
+    height: 100%;
+    
+    padding-top: 13px;
+    padding-right: 15px;
+    float: left;
+    color: aliceblue;
+    font-size: 12pt;
+    
+}
+.header-ngang1 a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: noidung; 
+}
+/*menu*/
+#main {
+  margin-top: 40px;
+}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size:15px;
+  font-weight: 400;
+  line-height: 36px; 
+  margin: 40px 0px 40px 5px;    
+  max-width: 100%; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  transform: rotate(-90deg);
+  font-family: menufont;
+    
+}
+.btn-2 {
+    letter-spacing: 0;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    box-sizing: border-box;
+
+}
+
+.btn-2.color-green:hover,
+.btn-2.color-green:active {
+  color: rgba(255,255,255,0.8);
+}
+
+
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 3px;
+  transition: all 280ms ease-in-out;  
+}
+
+.btn-2:after
+ {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+  opacity: 0;
+}
+
+.btn-2.color-green:after
+ {
+  border: 1px solid rgba(255,255,255,1.00);    
+}
+
+
+
+.btn-2:hover:after {
+  backface-visibility: hidden;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+  opacity: 1;
+}
+/*SLIDE MENU*/
+.overlay {
+  height: 0%;
+  width: 50vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+background: url("../../../in design/8.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+/*  background: url("../../../in design/8.jpg") contain;*/
+  background-color: rgba(31,31,31,0.3);
+  overflow-y: hidden;
+  transition: 0.5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+/*  margin-top: 30px;*/
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 60px;
+  z-index: 100000;  
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+.noidung
+{
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(17,17,17,1.00);
+    float: left; 
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+   
+}
+.noidung00
+{
+    width: 100%;
+    height: 100%;   
+}
+.noidung00 img
+{
+    opacity: 0.5;
+    filter: blur(7px);
+}
+.noidung01
+{
+    width: 70%;
+    height: 30%;
+    position: absolute;
+    z-index: 100;
+    color: rgba(255,255,255,1.00);
+    font-family: tieude1;
+    box-sizing: border-box;
+    top: 20%;
+    left: 10.5%;
+    font-size: 80pt;
+}
+.noidung02
+{
+    width: 70%;
+    height: 30%;
+    position: absolute;
+    z-index: 100;
+    color: rgba(248,248,248,0.9);
+    font-family: noidung; 
+    box-sizing: border-box;
+    top: 36%;
+    left: 10%;
+    font-size: 14pt;
+    line-height: 30px;
+    
+}
+.noidung03
+{
+    width: 70%;
+    position: absolute;
+    z-index: 100;
+    color: rgba(248,248,248,0.9);
+    font-family: noidung; 
+    box-sizing: border-box;
+    top: 36%;
+    font-size: 14pt;
+    line-height: 30px;
+    left: 15%;
+    overflow: hidden;
+}
+.noidung02 ul li
+{
+    margin-left: -20px;
+}
+.button
+{
+    width: 205px;
+    height: 50px;
+/*    position: absolute;*/
+    z-index: 100;
+    font-family: noidung; 
+    box-sizing: border-box;
+    top: 190px;
+    left: 20px;
+    font-size: 14pt;
+    line-height: 30px;
+    border: solid 1px;
+    border-color: aliceblue;
+    border-radius: 20px;
+    padding: 9px 40px;
+    
+}
+.button a
+{
+    text-decoration: none;
+    color: rgba(221,221,221,1.00);
+}
+.button:hover a
+{
+    color: rgba(255,255,255,1.00);
+}
+.noidung img
+{
+    z-index: 1;     
+}
+
+
+/*slideshow*/
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container2 {
+  position: relative;
+	height: 100%;
+/*  margin-top: 150px;*/
+    
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+	height: 100%;
+}
+.mySlides img{
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container 
+{
+   width: 600px;
+   height: 200px;
+  text-align: center;
+  padding: 2px 16px;
+  color: rgba(30,30,30,1.00);
+  position: absolute;
+  top: 60%;
+  left: 8%;
+  font-family: tieude1; 
+  line-height: 35px;
+  font-size: 25pt;
+  transition: all 3s; 
+    
+}
+.row1
+{ 
+    width: 50%;
+    height: 60%;
+    
+    position: absolute;
+    top: 10%;
+    left: 6%;
+}
+.row1:after {
+  content: "";
+  display: table;
+}
+
+
+.column {
+  float: left;
+  width: 23%;
+  height: 100%;
+  padding-right: 1%;
+ 
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo 
+{
+  width: 100%;
+/*  height: 100%;*/
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s;
+  border: solid 1px rgba(132,132,132,1.00) ;
+  background-color: rgba(0,0,0,1.00);
+  border-radius: 20px;  
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border: solid 1px rgba(41,41,41,1.00) ;  
+}
+.form
+{
+    width: 100%;
+    height: 100%;
+    padding: 200px;
+    backdrop-filter: blur(5px);
+    font-family: noidung;
+    color: aliceblue;
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    
+}
+.form-conten
+{
+    width: 100%;
+    height: 200px;
+    
+    position: absolute;
+    top: 0;
+    font-family: tieude1;
+    padding-top: 100px;
+    font-size: 60pt;
+    
+}
+input
+{
+    margin: 10px;
+    height: 50px;
+    border: solid 1px rgba(255,255,255,1.00);
+    border-radius: 10px;
+    background: rgba(61,61,61,0.6);
+    outline: none;
+    padding-left: 10px;
+}
+/*galery*/
+.galery0
+{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    margin: 0 auto;
+/*    margin-top: 100px;*/
+}
+.galery0-0
+{
+    width: 100%;
+    height: 50%;
+    background-color: black; 
+    overflow: hidden;
+}
+.galery0-0 img
+{
+    transform: scale(1);
+    opacity: 1; 
+    transition: all 1s;
+    filter: blur(1px);
+}
+.galery0-0:hover img
+{
+    transform: scale(1.2);
+    opacity: 0.9;
+    filter: blur(0px);
+}
+.galery1
+{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float: left;
+    overflow: hidden;
+    
+}
+.galery1 img
+{
+    transform: scale(1);
+    opacity: 1; 
+    transition: all 1s;
+    filter: blur(1px);
+}
+.galery1:hover img
+{
+    transform: scale(1.2);
+    opacity: 0.9; 
+    filter: blur(0px);
+}
+.galery2
+{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float: right;
+    
+}
+.galery2-1
+{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+.galery2-1 img
+{
+    transform: scale(1);
+    opacity: 1; 
+    transition: all 1s;
+    filter: blur(1px);
+}
+.galery2-1:hover img
+{
+    transform: scale(1.2);
+    opacity: 0.9;
+    filter: blur(0px);
+}
+.galery2-2
+{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.galery2-2-1
+{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float: left;
+    overflow: hidden;
+}
+.galery2-2-1 img
+{
+    transform: scale(1);
+    opacity: 1; 
+    transition: all 1s;
+    filter: blur(1px);
+}
+.galery2-2-1:hover img
+{
+    transform: scale(1.2);
+    opacity: 0.9; 
+    filter: blur(0px);
+}
+.galery2-2-2
+{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float: right;
+    overflow: hidden;
+}
+.galery2-2-2 img
+{
+    transform: scale(1);
+    opacity: 1; 
+    transition: all 1s;
+    filter: blur(1px);
+}
+.galery2-2-2:hover img
+{
+    transform: scale(1.2);
+    opacity: 0.9;  
+    filter: blur(0px);
+}
+
+/*galery slide*/
